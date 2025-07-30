@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QR Generator</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="QR Code Generator">
+    <meta name="keywords" content="QR, Generator">
+    <meta name="author" content="Steven Mendoza">
+    <meta http-equiv="refresh" content="1800"> <!-- Refresh each 30mins -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/webStyle.css">
+    <script src="/static/js/getData.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1>QR Generator</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="QR_data" class="QR_form">
+            <h2>Insert Data: </h2>
+            <form id="qrForm" method="POST">
+                <label class="text">Name:</label>
+                <input id="QR_name" class="strGetter"><br>
+
+                <label class="text">URL:</label>
+                <input id="QR_URL" class="strGetter"><br>
+
+                <label class="text">Box Size:</label>
+                <input id="QR_boxSize" class="strGetter"><br>
+
+                <label class="text">Border Size:</label>
+                <input id="QR_borderSize" class="strGetter"><br>
+
+                <label class="text">Fill Color:</label>
+                <input type="color" id="QR_fillColor" class="strGetter"><br>
+
+                <label class="text">Back Color:</label>
+                <input type="color" id="QR_backColor" class="strGetter"><br>
+
+                <label class="text">Download Format:</label><br>
+                <input type="submit" value="png">
+                <input type="submit" value="svg">
+            </form>
+        </section>
+        <section id="QR_imgContainer">
+            <img id="QR_image" src="../img.svg" alt="QR">
+        </section>
+    </main>
+
+    <footer>
+        <p>Steven Mendoza &copy; 2024</p>
+    </footer>
+</body>
+</html>
